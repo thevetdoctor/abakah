@@ -2,66 +2,67 @@
 <html lang="en">
 <!-- When you've made your list, click over to the solution.html file to see how I did it. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
 	body {
 		background-color: #000;
+        font-family: 'Raleway', sans-serif;
 		color: #fff;
-		font-size: 3em;
+		font-size: 2em;
+		margin: 0;
+		padding: .2em;
+		line-height: 1;
 	}
 
 	@keyframes spin {
 		0% {
-			transform: rotateX(0deg)
+			transform: rotateY(0deg)
 		}
 
 		100% {
-			transform: rotateX(360deg);
+			transform: rotateY(360deg);
 		}
 	}
 
 	.container {
-		padding: 2em;
+		padding: 0.5em;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: column wrap;
+		/* text-align: center; */
 	}
 
+	.logo {
+		align-self: center;
+		margin-bottom: 2em;
+	}
+	.display {
+		color: #000;
+	}
 	.box {
-		animation: spin 3s linear infinite;
-	}
-
-	.circle {
-		border-radius: 50%;
-		left: 6.25em;
-		right: 2.5em;
-		width: 2.5em;
-		height: 2.5em;
-		box-shadow: 0 1em 2em rgba(0, 0, 0, .5);
-	}
-
-	.box {
-		width: 2em;
-		height: 2em;
-		margin: 2em;
-		padding: 2em;
+		align-self: center;
+		width: 1.8em;
+		height: 1.8em;
+		margin: .2em;
+		padding: 1.8em;
 		background-color: brown;
 		border-radius: 50%;
 		text-align: center;
+		box-shadow: 0 1em 2em rgba(0, 0, 0, .5);
+		animation: spin 1s linear infinite;
 	}
 
 	.row {
 		display: flex;
 		flex-flow: row wrap;
+		align-content: center;
 	}
 
-	@media screen and (max-width: 400px) {
-		.row {
-			flex-flow: column-reverse wrap;
-		}
 
-		.box {
-			background-color: blueviolet;
-		}
-	}
-
-	@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+	@media only screen and (min-device-width: 375px)
+			and (max-device-width: 667px)
+			and (-webkit-min-device-pixel-ratio: 2) {
 		.row {
 			flex-flow: column-reverse;
 		}
@@ -78,9 +79,14 @@
 
 <body>
 	<div class="container">
-		<p>Create an unordered list! Make a list of the three web languages: HTML, CSS and JavaScript.</p>
+		<div class="logo">Animalworld NG...</div>
+		<div>Welcome to the web! <br><br> My name is Obafemi: a passionate web enthusiast, a software developer and an agribusiness consultant. <br><br>
+			It would amaze you how I handle all these aspects of life seamlessly. <br><br>
+			It takes focus, dedication, and determination.<br><br>
+			In the world of software, I work with HTML, CSS, JavaScript, PHP and Python. <br><br>
+			Enquiries: <br>email: animalworld.tech@gmail.com <br> mobile: +2348069100463</div>
 
-		<div class="circle">ooo</div>
+		<!-- <div class="circle">ooo</div> -->
 	</div>
 	<div class="row">
 		<div class="one box">1</div>
@@ -88,16 +94,8 @@
 		<div class="three box">3</div>
 		<div class="four box">4</div>
 		<div class="five box">5</div>
-		<div class="one box">1</div>
-		<div class="two box">2</div>
-		<div class="three box">3</div>
-		<div class="four box">4</div>
-		<div class="five box">5</div>
-		<div class="one box">1</div>
-		<div class="two box">2</div>
-		<div class="three box">3</div>
-		<div class="four box">4</div>
-		<div class="five box">5</div>
+		<div class="six box">6</div>
+		<div class="seven box">7</div>
 	</div>
 	<!--  <p>HTML</p><ul>
 <li>Coffee</li>
@@ -148,23 +146,23 @@
 		console.log(new Date().toLocaleDateString());
 		console.log(new Date().toLocaleTimeString());
 
-		//declare a variable to hold the div element
-		var display = document.querySelector('.display');
+		// //declare a variable to hold the div element
+		// var display = document.querySelector('.display');
 
-		//state the innerHTML content
-		display.innerHTML = "<ul>";
+		// //state the innerHTML content
+		// display.innerHTML = "<ul>";
 
-		//declare your array 'fruits'
-		var fruits = ['HTML', 'CSS', 'JavaScript'];
-		// fruits = ["Banana", "Orange", "Apple", "Mango"];
+		// //declare your array 'fruits'
+		// var fruits = ['HTML', 'CSS', 'JavaScript'];
+		// // fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-		//breakdown your for loop
-		for (i = 0; i < fruits.length; i++) {
-			display.innerHTML += "<li>" + fruits[i] + "</li>";
-		}
+		// //breakdown your for loop
+		// for (i = 0; i < fruits.length; i++) {
+		// 	display.innerHTML += "<li>" + fruits[i] + "</li>";
+		// }
 
-		//close up the unordered list
-		display.innerHTML += '</ul>';
+		// //close up the unordered list
+		// display.innerHTML += '</ul>';
 
 		let x = { "id": "val" };
 		let y = { "id": "val" };
